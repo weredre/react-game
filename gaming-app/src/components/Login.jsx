@@ -10,7 +10,7 @@ constructor(props){
     Username : "jro",
     email: "",
     Password: "1234",
-    Token : "", 
+    Token : "",
     }
 }
 
@@ -28,13 +28,13 @@ render() {
     return(<Form>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" name="email" value={this.state.email} 
+          <Form.Control type="email" name="email" value={this.state.email}
           placeholder="Enter email" onChange={this.changeHandler} />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
-      
+
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
@@ -47,31 +47,31 @@ render() {
     }
 }
 
-// a method to define the login and also run it 
-// 
-loginHandler = async () => {
-    const user = { 
-        username : this.state.Username,
-        password : this.state.Password,
-    }
-    const resp = await login(user) //this is saying wait for it to come back to the info
-    this.props.setUser(resp) 
-    //Props is coming from the parent in App.Js so we're saying run that function that was passed in props 
-    //and giving the response 
-    //and the response is basically signing the user in 
-}
+// a method to define the login and also run it
+//
+// loginHandler = async () => {
+//     const user = {
+//         username : this.state.Username,
+//         password : this.state.Password,
+//     }
+//     const resp = await login(user) //this is saying wait for it to come back to the info
+//     this.props.setUser(resp)
+    //Props is coming from the parent in App.Js so we're saying run that function that was passed in props
+    //and giving the response
+    //and the response is basically signing the user in
+// }
 
 
 
 
 
-
-    render (){
-    return (
-        <button onClick = {this.loginHandler}>Log In</button>
-        //This is the button to login
-    );
-    }
-}
+    //
+    // render (){
+    // return (
+    //     <button onClick = {this.loginHandler}>Log In</button>
+    //     //This is the button to login
+    // );
+    // }
+// }
 
 export default Login;
