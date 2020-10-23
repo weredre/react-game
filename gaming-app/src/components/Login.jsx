@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
-import {login} from '../services/index';
+// import {login} from '../services/index';
 
 class Login extends React.Component {
 
