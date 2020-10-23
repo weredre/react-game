@@ -10,7 +10,7 @@ class App extends React.Component {
     this.state = {
       username : "",
       userID : null,
-      token : "", 
+      token : "",
     }
   }
 
@@ -19,7 +19,7 @@ class App extends React.Component {
     this.setState({
       username : User.username,
       userID : User.id,
-      token : User.token, 
+      token : User.token,
     })
   }
 
@@ -46,10 +46,10 @@ class App extends React.Component {
       </>
 
       //Make a prop called setuser and set it equal to the method on this object called set user
-      <Login 
-        setUser = {this.setUser}
-        UserToken = {this.state.token}
-        />
+      // <Login
+      //   setUser = {this.setUser}
+      //   UserToken = {this.state.token}
+      //   />
 
     );
   }
